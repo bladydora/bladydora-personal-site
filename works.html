@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-zh="作品 — bladydora" data-en="Work — bladydora">作品 — bladydora</title>
+<meta name="description" content="bladydora 的开发项目、互动实验与 AI 创作。">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/i18n.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="12.5" cy="16" r="8.5" fill="currentColor"/>
+        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.85"/>
+      </svg>
+      <span>bladydora</span>
+    </a>
+    <nav class="nav">
+      <a href="/" data-zh="首页" data-en="Home">首页</a>
+      <a href="/works.html" class="is-current" data-zh="作品" data-en="Work">作品</a>
+      <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+      <button id="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to English">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1 data-zh="作品" data-en="Work">作品</h1>
+      <p class="lede"
+         data-zh="按三条线分组。带链接的在 GitHub 上开源，其余只是放在硬盘里的东西。"
+         data-en="Grouped into three threads. The linked ones are open source on GitHub; the rest just live on my disk.">
+        按三条线分组。带链接的在 GitHub 上开源，其余只是放在硬盘里的东西。
+      </p>
+    </div>
+
+    <section>
+      <h2 data-zh="开发项目" data-en="Development">开发项目</h2>
+      <ul class="works">
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/LearningMap" target="_blank" rel="noopener noreferrer">LearningMap</a></h3>
+            <span class="tech">Next.js · Supabase · Gemini</span>
+          </div>
+          <p data-zh="终身学习顾问。和 AI 自然聊天，自动整理成按领域与优先级组织的个人学习档案，数据存在你自己的 Supabase 里。"
+             data-en="A lifelong-learning advisor. Chat with an AI and it organizes what you're learning into a structured profile, stored in your own Supabase project.">
+            终身学习顾问。和 AI 自然聊天，自动整理成按领域与优先级组织的个人学习档案，数据存在你自己的 Supabase 里。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/MatrixAI-1.0" target="_blank" rel="noopener noreferrer"
+                   data-zh="MatrixAI 数字记忆" data-en="MatrixAI Digital Memory">MatrixAI 数字记忆</a></h3>
+            <span class="tech">Streamlit · Supabase</span>
+          </div>
+          <p data-zh="给对话装上记忆。重要性评分、自动分类、导入外部对话记录、超期归档，还有一层会自己浮现的待办认知层。"
+             data-en="Memory for conversations. Importance scoring, auto-classification, imports from other chat tools, archiving — plus a light to-do layer that surfaces on its own.">
+            给对话装上记忆。重要性评分、自动分类、导入外部对话记录、超期归档，还有一层会自己浮现的待办认知层。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/WeChat-Courier-macOS" target="_blank" rel="noopener noreferrer">WeChat Courier</a></h3>
+            <span class="tech">macOS · CLI · MCP</span>
+          </div>
+          <p data-zh="本地 macOS 边车程序，用 UI 自动化驱动已登录的微信桌面端发消息和文件。不实现协议机器人，只操作界面；同时提供 CLI、队列模式和 MCP 服务。"
+             data-en="A local macOS sidecar that drives the logged-in WeChat desktop app through UI automation. Not a protocol bot — it just works the interface. Exposed as CLI, queue mode and an MCP server.">
+            本地 macOS 边车程序，用 UI 自动化驱动已登录的微信桌面端发消息和文件。不实现协议机器人，只操作界面；同时提供 CLI、队列模式和 MCP 服务。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/real-time-translation" target="_blank" rel="noopener noreferrer">Real-time Translation</a></h3>
+            <span class="tech">ASR · LLM</span>
+          </div>
+          <p data-zh="给会议和视频课程做的实时翻译。"
+             data-en="Real-time translation for conferences and video courses.">
+            给会议和视频课程做的实时翻译。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/jobs" target="_blank" rel="noopener noreferrer">jobs</a></h3>
+            <span class="tech">Data viz</span>
+          </div>
+          <p data-zh="把美国劳工统计局的职业展望数据做成可以用眼睛翻的工具。它不是报告也不是论文，就是个探索数据的开发工具。"
+             data-en="A tool for visually exploring Bureau of Labor Statistics occupational data. Not a report, not a paper — a development tool for looking around.">
+            把美国劳工统计局的职业展望数据做成可以用眼睛翻的工具。它不是报告也不是论文，就是个探索数据的开发工具。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/BailianSDK-mechanical-arm" target="_blank" rel="noopener noreferrer">Mechanical Arm</a></h3>
+            <span class="tech">Bailian SDK</span>
+          </div>
+          <p data-zh="让一只机械臂写字。"
+             data-en="An AI that controls a robotic arm which writes.">
+            让一只机械臂写字。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/bladydora-to-do" target="_blank" rel="noopener noreferrer">To-do</a></h3>
+            <span class="tech">Personal tool</span>
+          </div>
+          <p data-zh="自己用的待办工具。"
+             data-en="A to-do tool I made for myself.">
+            自己用的待办工具。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/Wechat_miniprograms_WM" target="_blank" rel="noopener noreferrer">WeChat Mini-programs</a></h3>
+            <span class="tech">WeChat</span>
+          </div>
+          <p data-zh="给自己账号写的几个微信小程序。"
+             data-en="A few WeChat mini-programs built for my own account.">
+            给自己账号写的几个微信小程序。
+          </p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-zh="互动与实验" data-en="Interactive &amp; Experiments">互动与实验</h2>
+      <ul class="works">
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/Journey2025" target="_blank" rel="noopener noreferrer">Journey 2025</a></h3>
+            <span class="tech">React Three Fiber</span>
+          </div>
+          <p data-zh="一封做成 3D 小游戏的年度信。点击地面移动，捡起两块拼图，最后拆开一个信封。为手机做的。"
+             data-en="An annual letter shaped as a 3D game. Tap the ground to move, collect two puzzle pieces, open an envelope at the end. Built for phones.">
+            一封做成 3D 小游戏的年度信。点击地面移动，捡起两块拼图，最后拆开一个信封。为手机做的。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/digital-exhibition" target="_blank" rel="noopener noreferrer">Digital Exhibition</a></h3>
+            <span class="tech">Web</span>
+          </div>
+          <p data-zh="为自己生日办的一场电子艺术展。"
+             data-en="An electronic art exhibition I made to celebrate my birthday.">
+            为自己生日办的一场电子艺术展。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/Christmas-tree" target="_blank" rel="noopener noreferrer">Christmas Tree</a></h3>
+            <span class="tech">Gesture capture</span>
+          </div>
+          <p data-zh="用手势在浏览器里点亮一棵圣诞树。"
+             data-en="A Christmas tree you light up with hand gestures, captured in the browser.">
+            用手势在浏览器里点亮一棵圣诞树。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3 data-zh="消消乐" data-en="Match Game">消消乐</h3>
+            <span class="tag" data-zh="未开源" data-en="Local">未开源</span>
+          </div>
+          <p data-zh="「羊了个羊」风格的三消小游戏，三层堆叠布局，越往上层范围越小。"
+             data-en="A three-tile matching game in the style of Sheep-a-Sheep, with three stacked layers that shrink as they go up.">
+            「羊了个羊」风格的三消小游戏，三层堆叠布局，越往上层范围越小。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3>To find Xmetatom</h3>
+            <span class="tag" data-zh="未开源" data-en="Local">未开源</span>
+          </div>
+          <p data-zh="一个网页寻物小游戏。"
+             data-en="A small browser hidden-object game.">
+            一个网页寻物小游戏。
+          </p>
+        </li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-zh="AI 创作" data-en="AI Creative">AI 创作</h2>
+      <ul class="works">
+
+        <li>
+          <div class="work-head">
+            <h3 data-zh="AI 视频" data-en="AI Video">AI 视频</h3>
+            <span class="tag" data-zh="影像" data-en="Film">影像</span>
+          </div>
+          <p data-zh="短片与角色动画，包括一支梦境短片和一组毛绒角色。"
+             data-en="Short films and character animation, including a dream sequence and a set of plush characters.">
+            短片与角色动画，包括一支梦境短片和一组毛绒角色。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3 data-zh="AI 生图" data-en="AI Imagery">AI 生图</h3>
+            <span class="tag" data-zh="图像" data-en="Images">图像</span>
+          </div>
+          <p data-zh="成系列的图像创作。"
+             data-en="Series-based image work.">
+            成系列的图像创作。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3 data-zh="AI 绘本" data-en="Picture Books">AI 绘本</h3>
+            <span class="tag" data-zh="叙事" data-en="Narrative">叙事</span>
+          </div>
+          <p data-zh="角色设定、分镜与内容结构。"
+             data-en="Character design, storyboards and narrative structure.">
+            角色设定、分镜与内容结构。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3 data-zh="3D 场景" data-en="3D Scenes">3D 场景</h3>
+            <span class="tag">Tripo</span>
+          </div>
+          <p data-zh="从文本和图片生成模型，再搭成可以走进去的场景。"
+             data-en="Models generated from text and images, assembled into scenes you can walk into.">
+            从文本和图片生成模型，再搭成可以走进去的场景。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3 data-zh="LOGO 与视觉" data-en="Logo &amp; Identity">LOGO 与视觉</h3>
+            <span class="tag" data-zh="设计" data-en="Design">设计</span>
+          </div>
+          <p data-zh="标识设计，其中「重叠日蚀」就是这个站点左上角那两个圆。"
+             data-en="Identity design. The one called Overlapping Eclipse is the pair of circles at the top-left of this site.">
+            标识设计，其中「重叠日蚀」就是这个站点左上角那两个圆。
+          </p>
+        </li>
+
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 bladydora</span>
+    <a class="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2026029287号-2</a>
+  </div>
+</footer>
+
+</body>
+</html>

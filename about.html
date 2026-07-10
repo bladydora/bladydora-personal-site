@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-zh="关于 — bladydora" data-en="About — bladydora">关于 — bladydora</title>
+<meta name="description" content="关于 bladydora。">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/i18n.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="12.5" cy="16" r="8.5" fill="currentColor"/>
+        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.85"/>
+      </svg>
+      <span>bladydora</span>
+    </a>
+    <nav class="nav">
+      <a href="/" data-zh="首页" data-en="Home">首页</a>
+      <a href="/works.html" data-zh="作品" data-en="Work">作品</a>
+      <a href="/about.html" class="is-current" data-zh="关于" data-en="About">关于</a>
+      <button id="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to English">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1 data-zh="关于" data-en="About">关于</h1>
+    </div>
+
+    <section>
+      <div class="prose">
+        <!--
+          TODO（本人填写）：下面这段是刻意写得克制的占位文字，只陈述这个站点是什么，
+          没有替你编造履历。想加一句你的职业背景、所在城市或者正在琢磨的问题，直接改这里。
+          记得中英两版都改：data-zh / data-en 两个属性，以及标签之间的默认中文正文。
+        -->
+        <p data-zh="bladydora 是我的网络 ID。这个站点用来放我做过的一些东西：开发项目、互动实验，以及用 AI 做的影像和图像。"
+           data-en="bladydora is the name I use online. This site holds some of the things I've made: software projects, interactive experiments, and images and films made with AI.">
+          bladydora 是我的网络 ID。这个站点用来放我做过的一些东西：开发项目、互动实验，以及用 AI 做的影像和图像。
+        </p>
+        <p data-zh="大部分东西是为了解决自己的问题才写的，写完顺手开源；也有一些完全没用，纯粹是做的时候高兴。两类我都留着。"
+           data-en="Most of it was written to solve a problem I actually had, then open-sourced. Some of it is useless and was made purely because making it was fun. I keep both.">
+          大部分东西是为了解决自己的问题才写的，写完顺手开源；也有一些完全没用，纯粹是做的时候高兴。两类我都留着。
+        </p>
+        <p data-zh="日常的本职工作不在这里展示。"
+           data-en="My day job isn't shown here.">
+          日常的本职工作不在这里展示。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-zh="联系" data-en="Elsewhere">联系</h2>
+      <ul class="contact">
+        <li>
+          <span>GitHub</span>
+          <a href="https://github.com/bladydora" target="_blank" rel="noopener noreferrer">github.com/bladydora</a>
+        </li>
+        <!--
+          TODO（本人决定）：是否公开邮箱？
+          公开邮箱会被爬虫抓去发垃圾邮件。想公开就取消下面这行的注释并填地址。
+          <li><span data-zh="邮箱" data-en="Email">邮箱</span> <a href="mailto:你的地址">你的地址</a></li>
+        -->
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-zh="这个站点" data-en="This site">这个站点</h2>
+      <div class="prose">
+        <p data-zh="纯手写的静态 HTML，没有构建步骤，没有框架，没有向第三方发出的请求。源码在 GitHub 上。"
+           data-en="Hand-written static HTML. No build step, no framework, no third-party requests. The source is on GitHub.">
+          纯手写的静态 HTML，没有构建步骤，没有框架，没有向第三方发出的请求。源码在 GitHub 上。
+        </p>
+        <p>
+          <a href="https://github.com/bladydora/bladydora-personal-site" target="_blank" rel="noopener noreferrer"
+             data-zh="查看本站源码 →" data-en="Source of this site →">查看本站源码 →</a>
+        </p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 bladydora</span>
+    <a class="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2026029287号-2</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-zh="bladydora — 个人作品" data-en="bladydora — Selected Work">bladydora — 个人作品</title>
+<meta name="description" content="bladydora 的个人作品站：AI 创作、个人开发项目与一些小实验。">
+<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/i18n.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="12.5" cy="16" r="8.5" fill="currentColor"/>
+        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.85"/>
+      </svg>
+      <span>bladydora</span>
+    </a>
+    <nav class="nav">
+      <a href="/" class="is-current" data-zh="首页" data-en="Home">首页</a>
+      <a href="/works.html" data-zh="作品" data-en="Work">作品</a>
+      <a href="/about.html" data-zh="关于" data-en="About">关于</a>
+      <button id="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to English">EN</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1 data-zh="做点东西。" data-en="Making things.">做点东西。</h1>
+      <p class="lede"
+         data-zh="我叫 bladydora。业余时间用 AI 和代码做一些东西 —— 学习工具、记忆系统、小游戏、短片和图像。这里放一些做过的。"
+         data-en="I'm bladydora. In my spare time I build things with AI and code — learning tools, memory systems, small games, short films and images. Here's some of it.">
+        我叫 bladydora。业余时间用 AI 和代码做一些东西 —— 学习工具、记忆系统、小游戏、短片和图像。这里放一些做过的。
+      </p>
+    </div>
+
+    <section>
+      <h2 data-zh="精选" data-en="Selected">精选</h2>
+      <ul class="works">
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/LearningMap" target="_blank" rel="noopener noreferrer">LearningMap</a></h3>
+            <span class="tech">Next.js · Supabase · Gemini</span>
+          </div>
+          <p data-zh="终身学习顾问。和 AI 自然聊天，自动整理成按领域与优先级组织的个人学习档案。"
+             data-en="A lifelong-learning advisor. Chat with an AI, and it organizes what you're learning into a structured profile.">
+            终身学习顾问。和 AI 自然聊天，自动整理成按领域与优先级组织的个人学习档案。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/MatrixAI-1.0" target="_blank" rel="noopener noreferrer"
+                   data-zh="MatrixAI 数字记忆" data-en="MatrixAI Digital Memory">MatrixAI 数字记忆</a></h3>
+            <span class="tech">Streamlit · Supabase</span>
+          </div>
+          <p data-zh="给对话装上记忆。重要性评分、自动分类、导入外部对话记录，超期会话自动归档。"
+             data-en="Memory for conversations. Importance scoring, auto-classification, imports from other chat tools, and automatic archiving.">
+            给对话装上记忆。重要性评分、自动分类、导入外部对话记录，超期会话自动归档。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/Journey2025" target="_blank" rel="noopener noreferrer">Journey 2025</a></h3>
+            <span class="tech">React Three Fiber</span>
+          </div>
+          <p data-zh="一封做成 3D 小游戏的年度信。点击移动、捡起拼图，最后拆开一个信封。"
+             data-en="An annual letter shaped as a 3D game. Tap to move, collect the pieces, open the envelope at the end.">
+            一封做成 3D 小游戏的年度信。点击移动、捡起拼图，最后拆开一个信封。
+          </p>
+        </li>
+
+        <li>
+          <div class="work-head">
+            <h3><a href="https://github.com/bladydora/WeChat-Courier-macOS" target="_blank" rel="noopener noreferrer">WeChat Courier</a></h3>
+            <span class="tech">macOS · CLI · MCP</span>
+          </div>
+          <p data-zh="本地 macOS 边车程序，用 UI 自动化驱动已登录的微信桌面端发消息和文件。不碰协议，只做界面。"
+             data-en="A local macOS sidecar that drives the logged-in WeChat desktop app through UI automation. No protocol bot — just the interface.">
+            本地 macOS 边车程序，用 UI 自动化驱动已登录的微信桌面端发消息和文件。不碰协议，只做界面。
+          </p>
+        </li>
+
+      </ul>
+      <p style="margin-top:1.5rem">
+        <a href="/works.html" data-zh="全部作品 →" data-en="All work →">全部作品 →</a>
+      </p>
+    </section>
+
+    <section>
+      <h2 data-zh="三条线" data-en="Three threads">三条线</h2>
+      <div class="prose">
+        <p data-zh="开发项目 —— 学习档案、对话记忆、自动化工具。多数是为了解决自己的问题才写的，写完顺手开源。"
+           data-en="Development — learning profiles, conversation memory, automation tools. Mostly written to solve my own problems, then open-sourced.">
+          开发项目 —— 学习档案、对话记忆、自动化工具。多数是为了解决自己的问题才写的，写完顺手开源。
+        </p>
+        <p data-zh="互动与实验 —— 小游戏、手势捕捉、电子展览。没什么用，但做的时候很高兴。"
+           data-en="Interactive experiments — small games, gesture capture, an online exhibition. Not useful. Fun to make.">
+          互动与实验 —— 小游戏、手势捕捉、电子展览。没什么用，但做的时候很高兴。
+        </p>
+        <p data-zh="AI 创作 —— 短片、图像、绘本、3D 场景和标识设计。"
+           data-en="AI creative work — short films, images, picture books, 3D scenes and logo design.">
+          AI 创作 —— 短片、图像、绘本、3D 场景和标识设计。
+        </p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 bladydora</span>
+    <!--
+      ⚠️ 备案链接：不要给它加 data-zh / data-en，也不要被任何脚本改写。
+         ICP 号在本页 HTML 源码中必须恰好出现 1 次（smoke-bladydora.sh 会检查）。
+
+      公安备案号下发后，在此处补上（与 ICP 号并列，中间用 · 分隔）：
+      <a href="https://beian.mps.gov.cn/" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/beian.png" alt="" width="14" height="14"> 沪公网安备 31XXXXXXXXXXXX号
+      </a>
+    -->
+    <a class="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2026029287号-2</a>
+  </div>
+</footer>
+
+</body>
+</html>
