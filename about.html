@@ -5,27 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-zh="关于 — bladydora" data-en="About — bladydora">关于 — bladydora</title>
 <meta name="description" content="关于 bladydora。">
-<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/style.css">
-<script src="/assets/i18n.js" defer></script>
+<meta name="theme-color" content="#f8f5ff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0a18" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/i18n.js" defer></script>
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/">
-      <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+    <a class="brand" href="index.html">
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
         <circle cx="12.5" cy="16" r="8.5" fill="currentColor"/>
-        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.85"/>
+        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.8"/>
       </svg>
       <span>bladydora</span>
     </a>
     <nav class="nav">
-      <a href="/" data-zh="首页" data-en="Home">首页</a>
-      <a href="/works.html" data-zh="作品" data-en="Work">作品</a>
-      <a href="/about.html" class="is-current" data-zh="关于" data-en="About">关于</a>
+      <a href="index.html" data-zh="首页" data-en="Home">首页</a>
+      <a href="works.html" data-zh="作品" data-en="Work">作品</a>
+      <a href="about.html" class="is-current" data-zh="关于" data-en="About">关于</a>
       <button id="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to English">EN</button>
     </nav>
   </div>
@@ -35,6 +35,7 @@
   <div class="wrap">
 
     <div class="hero">
+      <p class="eyebrow" data-zh="这个人 / 这个站" data-en="The person / the site">这个人 / 这个站</p>
       <h1 data-zh="关于" data-en="About">关于</h1>
     </div>
 
@@ -78,13 +79,17 @@
     <section>
       <h2 data-zh="这个站点" data-en="This site">这个站点</h2>
       <div class="prose">
-        <p data-zh="纯手写的静态 HTML，没有构建步骤，没有框架，没有向第三方发出的请求。源码在 GitHub 上。"
-           data-en="Hand-written static HTML. No build step, no framework, no third-party requests. The source is on GitHub.">
-          纯手写的静态 HTML，没有构建步骤，没有框架，没有向第三方发出的请求。源码在 GitHub 上。
+        <p data-zh="纯手写的静态 HTML，没有构建步骤，没有框架，没有向第三方发出的请求。字体走系统栈，背景的光晕和噪点都是 CSS 画的。"
+           data-en="Hand-written static HTML. No build step, no framework, no third-party requests. System fonts; the glow and grain in the background are drawn in CSS.">
+          纯手写的静态 HTML，没有构建步骤，没有框架，没有向第三方发出的请求。字体走系统栈，背景的光晕和噪点都是 CSS 画的。
+        </p>
+        <p data-zh="紫色来自我做的一个标识，叫「重叠日蚀」—— 左上角那两个叠在一起的圆。"
+           data-en="The purple comes from a logo I made called Overlapping Eclipse — the two circles at the top-left.">
+          紫色来自我做的一个标识，叫「重叠日蚀」—— 左上角那两个叠在一起的圆。
         </p>
         <p>
-          <a href="https://github.com/bladydora/bladydora-personal-site" target="_blank" rel="noopener noreferrer"
-             data-zh="查看本站源码 →" data-en="Source of this site →">查看本站源码 →</a>
+          <a class="arrow-link" href="https://github.com/bladydora/bladydora-personal-site" target="_blank" rel="noopener noreferrer"
+             data-zh="查看本站源码" data-en="Source of this site">查看本站源码</a>
         </p>
       </div>
     </section>

@@ -5,8 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-zh="页面不存在 — bladydora" data-en="Not found — bladydora">页面不存在 — bladydora</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#fbfbfa" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8f5ff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0a18" media="(prefers-color-scheme: dark)">
+<!--
+  ⚠️ 只有本页用根绝对路径（/assets/…、/works.html），其余页面用相对路径。
+     原因：nginx 的 error_page 是内部跳转，浏览器地址栏仍停在 /a/b 这类深层路径上，
+     相对路径会解析成 /a/assets/style.css 而丢失样式。
+     代价：直接双击本文件（file://）时无样式——无所谓，它不是给人手动打开的。
+-->
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/style.css">
 <script src="/assets/i18n.js" defer></script>
@@ -16,9 +22,9 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/">
-      <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
         <circle cx="12.5" cy="16" r="8.5" fill="currentColor"/>
-        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.85"/>
+        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.8"/>
       </svg>
       <span>bladydora</span>
     </a>
@@ -35,8 +41,8 @@
   <div class="wrap notfound">
     <p class="code">404</p>
     <p class="prose" data-zh="这里没有东西。" data-en="Nothing here.">这里没有东西。</p>
-    <p style="margin-top:1.5rem">
-      <a href="/" data-zh="回首页 →" data-en="Back home →">回首页 →</a>
+    <p style="margin-top:1.75rem">
+      <a class="arrow-link" href="/" data-zh="回首页" data-en="Back home">回首页</a>
     </p>
   </div>
 </main>
