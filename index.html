@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to Bladydora's World</title>
-    <script type="module" crossorigin src="./assets/index-W-_soSgW.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BvqbUc6P.css">
+    <script type="module" crossorigin src="./assets/index-Cu9KMfxZ.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DmFVubDq.css">
   </head>
   <body>
     <canvas id="world-canvas" aria-label="Bladydora 3D World"></canvas>
@@ -48,11 +48,28 @@
         <button id="toggle-fp-btn" class="hud-btn" type="button" title="切换第一人称鼠标锁定漫游 (F)">
           第一人称
         </button>
+        <button id="toggle-map-btn" class="hud-btn" type="button" title="展开/收起世界画卷地图 (M)">
+          地图
+        </button>
         <button id="toggle-index-btn" class="hud-btn hud-btn-primary" type="button">
           Index
         </button>
       </div>
     </header>
+
+    <!-- 右上角古卷展开式世界地图（默认收起，点击「地图」或按 M 展开） -->
+    <aside id="world-map-scroll" class="world-map-scroll" aria-hidden="true">
+      <div class="scroll-rod scroll-rod-top"></div>
+      <div class="scroll-body">
+        <div class="scroll-header">
+          <span class="scroll-title">WORLD MAP · 漫游图卷</span>
+          <button id="close-map-btn" class="scroll-close" type="button" aria-label="收起地图">×</button>
+        </div>
+        <canvas id="world-map-canvas" class="world-map-canvas"></canvas>
+        <div class="scroll-footer">点击地标圆点即可前往 · 白色光点为当前位置</div>
+      </div>
+      <div class="scroll-rod scroll-rod-bottom"></div>
+    </aside>
 
     <!-- 中心准星与悬停提示 -->
     <div id="reticle" class="reticle" aria-hidden="true">
@@ -123,6 +140,36 @@
         </div>
         <div class="drawer-divider"></div>
         <div id="index-grid" class="index-grid"></div>
+      </div>
+    </div>
+
+    <!-- 老木屋沉浸融镜舞台（走入或点击老木屋门槛时丝滑切入原图电影级 2.5D 舞台） -->
+    <div id="cabin-sanctuary" class="cabin-sanctuary hidden" aria-hidden="true">
+      <img src="./assets/cabin-sanctuary.jpg" alt="" class="sanctuary-backdrop" aria-hidden="true" />
+      <div class="sanctuary-vignette"></div>
+      <canvas id="sanctuary-dust" class="sanctuary-dust"></canvas>
+
+      <div class="sanctuary-top">
+        <button id="exit-sanctuary-btn" class="hud-btn hud-btn-primary" type="button">
+          ← 走出老木屋
+        </button>
+        <div class="sanctuary-caption">
+          <span class="sanctuary-kicker">SANCTUARY · 老木屋</span>
+          <span class="sanctuary-hint">移动鼠标感受光影视差 · 点击光点查看作品 · ESC 走出</span>
+        </div>
+      </div>
+
+      <div class="sanctuary-stage" id="sanctuary-stage">
+        <div class="sanctuary-frame" id="sanctuary-frame">
+          <img
+            src="./assets/cabin-sanctuary.jpg"
+            alt="老木屋与红丝绒沙发上的她"
+            class="sanctuary-img"
+            draggable="false"
+          />
+          <div class="sanctuary-sunbeam"></div>
+          <div class="sanctuary-hotspots" id="sanctuary-hotspots"></div>
+        </div>
       </div>
     </div>
 
