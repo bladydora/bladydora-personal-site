@@ -1,142 +1,140 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-zh="bladydora — 个人作品" data-en="bladydora — Selected Work">bladydora — 个人作品</title>
-<meta name="description" content="bladydora 的个人作品站：AI 创作、个人开发项目与一些小实验。">
-<meta name="theme-color" content="#f8f5ff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0e0a18" media="(prefers-color-scheme: dark)">
-<!-- 资源与导航一律用相对路径：这样直接双击 HTML（file://）也能看到样式。
-     根绝对路径（/assets/…）在 file:// 下会指向硬盘根目录，CSS/JS 全部加载不到。 -->
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="assets/style.css">
-<script src="assets/i18n.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Bladydora's World</title>
+    <script type="module" crossorigin src="./assets/index-W-_soSgW.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BvqbUc6P.css">
+  </head>
+  <body>
+    <canvas id="world-canvas" aria-label="Bladydora 3D World"></canvas>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html">
-      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
-        <circle cx="12.5" cy="16" r="8.5" fill="currentColor"/>
-        <circle cx="19.5" cy="16" r="8.5" style="fill: var(--accent)" fill-opacity="0.8"/>
-      </svg>
-      <span>bladydora</span>
-    </a>
-    <nav class="nav">
-      <a href="index.html" class="is-current" data-zh="首页" data-en="Home">首页</a>
-      <a href="works.html" data-zh="作品" data-en="Work">作品</a>
-      <a href="about.html" data-zh="关于" data-en="About">关于</a>
-      <button id="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to English">EN</button>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <div class="wrap">
-
-    <div class="hero">
-      <p class="eyebrow" data-zh="AI · 代码 · 图像" data-en="AI · Code · Images">AI · 代码 · 图像</p>
-      <h1 data-zh="做点东西。" data-en="Making things.">做点东西。</h1>
-      <p class="lede"
-         data-zh="我叫 bladydora。业余时间用 AI 和代码做一些东西 —— 学习工具、记忆系统、小游戏、短片和图像。这里放一些做过的。"
-         data-en="I'm bladydora. In my spare time I build things with AI and code — learning tools, memory systems, small games, short films and images. Here's some of it.">
-        我叫 bladydora。业余时间用 AI 和代码做一些东西 —— 学习工具、记忆系统、小游戏、短片和图像。这里放一些做过的。
-      </p>
+    <!-- 极简文艺电影感开场迷雾 -->
+    <div id="mist-gate" class="mist-gate" role="dialog" aria-modal="true">
+      <div class="mist-layer mist-layer-1"></div>
+      <div class="mist-layer mist-layer-2"></div>
+      <div class="mist-layer mist-layer-3"></div>
+      <div class="mist-vignette"></div>
+      <div class="mist-content">
+        <div class="mist-welcome-kicker">Welcome to</div>
+        <h1 class="mist-title">Bladydora’s World</h1>
+        <div class="mist-hairline"></div>
+        <button id="enter-world-btn" class="enter-btn" type="button">
+          <span class="enter-btn-glow"></span>
+          <span class="enter-btn-text">Enter</span>
+        </button>
+      </div>
     </div>
 
-    <section>
-      <h2 data-zh="精选" data-en="Selected">精选</h2>
-      <ul class="works">
-
-        <li>
-          <div class="work-head">
-            <h3><a href="https://github.com/bladydora/LearningMap" target="_blank" rel="noopener noreferrer">LearningMap</a></h3>
-            <span class="tech">Next.js · Supabase · Gemini</span>
-          </div>
-          <p data-zh="终身学习顾问。和 AI 自然聊天，自动整理成按领域与优先级组织的个人学习档案。"
-             data-en="A lifelong-learning advisor. Chat with an AI, and it organizes what you're learning into a structured profile.">
-            终身学习顾问。和 AI 自然聊天，自动整理成按领域与优先级组织的个人学习档案。
-          </p>
-        </li>
-
-        <li>
-          <div class="work-head">
-            <h3><a href="https://github.com/bladydora/MatrixAI-1.0" target="_blank" rel="noopener noreferrer"
-                   data-zh="MatrixAI 数字记忆" data-en="MatrixAI Digital Memory">MatrixAI 数字记忆</a></h3>
-            <span class="tech">Streamlit · Supabase</span>
-          </div>
-          <p data-zh="给对话装上记忆。重要性评分、自动分类、导入外部对话记录，超期会话自动归档。"
-             data-en="Memory for conversations. Importance scoring, auto-classification, imports from other chat tools, and automatic archiving.">
-            给对话装上记忆。重要性评分、自动分类、导入外部对话记录，超期会话自动归档。
-          </p>
-        </li>
-
-        <li>
-          <div class="work-head">
-            <h3><a href="https://github.com/bladydora/Journey2025" target="_blank" rel="noopener noreferrer">Journey 2025</a></h3>
-            <span class="tech">React Three Fiber</span>
-          </div>
-          <p data-zh="一封做成 3D 小游戏的年度信。点击移动、捡起拼图，最后拆开一个信封。"
-             data-en="An annual letter shaped as a 3D game. Tap to move, collect the pieces, open the envelope at the end.">
-            一封做成 3D 小游戏的年度信。点击移动、捡起拼图，最后拆开一个信封。
-          </p>
-        </li>
-
-        <li>
-          <div class="work-head">
-            <h3><a href="https://github.com/bladydora/WeChat-Courier-macOS" target="_blank" rel="noopener noreferrer">WeChat Courier</a></h3>
-            <span class="tech">macOS · CLI · MCP</span>
-          </div>
-          <p data-zh="本地 macOS 边车程序，用 UI 自动化驱动已登录的微信桌面端发消息和文件。不碰协议，只做界面。"
-             data-en="A local macOS sidecar that drives the logged-in WeChat desktop app through UI automation. No protocol bot — just the interface.">
-            本地 macOS 边车程序，用 UI 自动化驱动已登录的微信桌面端发消息和文件。不碰协议，只做界面。
-          </p>
-        </li>
-
-      </ul>
-      <p style="margin-top:1.75rem">
-        <a class="arrow-link" href="works.html" data-zh="全部作品" data-en="All work">全部作品</a>
-      </p>
-    </section>
-
-    <section>
-      <h2 data-zh="三条线" data-en="Three threads">三条线</h2>
-      <div class="prose">
-        <p data-zh="开发项目 —— 学习档案、对话记忆、自动化工具。多数是为了解决自己的问题才写的，写完顺手开源。"
-           data-en="Development — learning profiles, conversation memory, automation tools. Mostly written to solve my own problems, then open-sourced.">
-          开发项目 —— 学习档案、对话记忆、自动化工具。多数是为了解决自己的问题才写的，写完顺手开源。
-        </p>
-        <p data-zh="互动与实验 —— 小游戏、手势捕捉、电子展览。没什么用，但做的时候很高兴。"
-           data-en="Interactive experiments — small games, gesture capture, an online exhibition. Not useful. Fun to make.">
-          互动与实验 —— 小游戏、手势捕捉、电子展览。没什么用，但做的时候很高兴。
-        </p>
-        <p data-zh="AI 创作 —— 短片、图像、绘本、3D 场景和标识设计。"
-           data-en="AI creative work — short films, images, picture books, 3D scenes and logo design.">
-          AI 创作 —— 短片、图像、绘本、3D 场景和标识设计。
-        </p>
+    <!-- 顶部极简导航 HUD -->
+    <header class="hud-top">
+      <div class="brand-pill">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Bladydora</span>
       </div>
-    </section>
 
-  </div>
-</main>
+      <div class="hud-actions">
+        <button id="toggle-audio-btn" class="hud-btn" type="button" title="氛围音开关">
+          Sound: Off
+        </button>
+        <label class="hud-btn" for="spz-file-input" title="可选：导入 .spz 场景">
+          .spz
+        </label>
+        <input id="spz-file-input" type="file" accept=".spz,.ply,.splat,.ksplat" hidden />
+        <button id="toggle-coord-btn" class="hud-btn" type="button" title="快捷键 P：取坐标">
+          P
+        </button>
+        <button id="toggle-fp-btn" class="hud-btn" type="button" title="切换第一人称鼠标锁定漫游 (F)">
+          第一人称
+        </button>
+        <button id="toggle-index-btn" class="hud-btn hud-btn-primary" type="button">
+          Index
+        </button>
+      </div>
+    </header>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 bladydora</span>
-    <!--
-      ⚠️ 备案链接：不要给它加 data-zh / data-en，也不要被任何脚本改写。
-         ICP 号在本页 HTML 源码中必须恰好出现 1 次（smoke-bladydora.sh 会检查）。
+    <!-- 中心准星与悬停提示 -->
+    <div id="reticle" class="reticle" aria-hidden="true">
+      <div class="reticle-dot"></div>
+      <div id="reticle-label" class="reticle-label"></div>
+    </div>
 
-      公安备案号下发后，在此处补上（与 ICP 号并列，中间用 · 分隔）：
-      <a href="https://beian.mps.gov.cn/" target="_blank" rel="noopener noreferrer">
-        <img src="assets/beian.png" alt="" width="14" height="14"> 沪公网安备 31XXXXXXXXXXXX号
-      </a>
-    -->
-    <a class="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2026029287号-2</a>
-  </div>
-</footer>
+    <!-- 底部极简提示与 ICP 备案（源码中恰好出现 1 次） -->
+    <footer class="hud-bottom">
+      <div class="controls-pill" id="controls-pill">
+        <span><kbd>WASD</kbd> 漫游</span>
+        <span>拖拽 / <kbd>F</kbd> 转向</span>
+        <span class="progress-badge" id="discovery-progress">0 / 6</span>
+      </div>
+      <div class="icp-bar">
+        <a
+          class="icp-link"
+          href="https://beian.miit.gov.cn/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >沪ICP备2026029287号-2</a
+        >
+      </div>
+    </footer>
 
-</body>
+    <!-- 坐标助手浮窗 -->
+    <aside id="coord-panel" class="coord-panel hidden">
+      <div class="coord-header">
+        <strong>COORDINATES</strong>
+        <button id="close-coord-btn" class="icon-close" type="button" aria-label="关闭">×</button>
+      </div>
+      <div class="coord-readout" id="coord-readout">[0.00, 1.70, 0.00]</div>
+      <button id="copy-coord-btn" class="hud-btn hud-btn-primary" type="button">Copy</button>
+    </aside>
+
+    <!-- 米山舞色散棱镜 × 暗调废墟诗意 · 节点艺术展签抽屉 -->
+    <aside id="node-drawer" class="node-drawer hidden" role="dialog" aria-label="节点详情">
+      <div class="prism-ambient"></div>
+      <div class="corner-mark corner-tl"></div>
+      <div class="corner-mark corner-br"></div>
+      <div class="drawer-watermark" id="drawer-watermark">ARCHIVE</div>
+
+      <div class="drawer-inner">
+        <div class="drawer-header">
+          <span id="drawer-badge" class="drawer-badge">01 · WORKS</span>
+          <button id="close-drawer-btn" class="icon-close" type="button" aria-label="关闭">×</button>
+        </div>
+        <h2 id="drawer-title" class="drawer-title"></h2>
+        <p id="drawer-subtitle" class="drawer-subtitle"></p>
+        <div class="drawer-divider"></div>
+        <p id="drawer-summary" class="drawer-summary"></p>
+        <div id="drawer-items" class="drawer-items"></div>
+      </div>
+    </aside>
+
+    <!-- 米山舞艺术画册风 · 花园目录弹层 -->
+    <div id="index-modal" class="index-modal hidden" role="dialog" aria-modal="true" aria-label="花园目录">
+      <div class="index-card">
+        <div class="prism-ambient"></div>
+        <div class="corner-mark corner-tl"></div>
+        <div class="corner-mark corner-br"></div>
+        <div class="index-header">
+          <div>
+            <div class="index-kicker">EXHIBITION INDEX · ARCHIVE</div>
+            <h2>Bladydora’s World</h2>
+          </div>
+          <button id="close-index-btn" class="icon-close" type="button" aria-label="关闭">×</button>
+        </div>
+        <div class="drawer-divider"></div>
+        <div id="index-grid" class="index-grid"></div>
+      </div>
+    </div>
+
+    <!-- 拖拽 .spz 文件覆盖提示 -->
+    <div id="drop-overlay" class="drop-overlay hidden">
+      <div class="drop-box">
+        <div class="drop-title">Drop .spz / .ply to enter</div>
+      </div>
+    </div>
+
+    <!-- Toast 通知 -->
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  </body>
 </html>
