@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
+  <head><link rel="icon" href="data:,">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Welcome to Bladydora's World</title>
-    <script type="module" crossorigin src="./assets/index-CU7Xreg3.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DpPyj8uj.css">
+    <script type="module" crossorigin src="./assets/index-XLZwYVd1.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BvEric2_.css">
   </head>
   <body>
     <canvas id="world-canvas" aria-label="Bladydora 3D World"></canvas>
 
+    <div id="touch-stick" hidden aria-hidden="true"><i></i></div>
     <!-- 极简文艺电影感开场迷雾 -->
     <div id="mist-gate" class="mist-gate" role="dialog" aria-modal="true">
       <div class="mist-layer mist-layer-1"></div>
@@ -20,9 +21,9 @@
         <div class="mist-welcome-kicker">Welcome to</div>
         <h1 class="mist-title">Bladydora’s World</h1>
         <div class="mist-hairline"></div>
-        <button id="enter-world-btn" class="enter-btn" type="button">
+        <button id="enter-world-btn" class="enter-btn" type="button" disabled>
           <span class="enter-btn-glow"></span>
-          <span class="enter-btn-text">Enter</span>
+          <span class="enter-btn-text" aria-live="polite">载入中…</span>
         </button>
       </div>
     </div>
@@ -52,7 +53,7 @@
           地图
         </button>
         <button id="toggle-index-btn" class="hud-btn hud-btn-primary" type="button">
-          Index
+          <span class="index-en" lang="en">Index</span><span class="index-zh">目录</span>
         </button>
       </div>
     </header>
@@ -84,6 +85,7 @@
         <span>拖拽 / <kbd>F</kbd> 转向</span>
         <span class="progress-badge" id="discovery-progress">0 / 6</span>
       </div>
+      <span class="touch-hint">左手滑动行走 · 右手滑动转向 · 轻点探索</span>
       <div class="icp-bar">
         <a
           class="icp-link"
